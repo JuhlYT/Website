@@ -1,0 +1,137 @@
+/* Grundlegende Stile für die gesamte Seite */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: rgb(255, 255, 255);
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffdd57; /* Akzentfarbe bei Hover */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+.hero {
+    background: url('images/TOTCLogo.jpg') no-repeat center center/cover;
+    color: #fefeff; /* Weiße Farbe für besseren Kontrast auf schwarz-weißem Hintergrund */
+    padding: 6rem 2rem; /* Erhöhte Höhe für bessere Bildansicht */
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 60vh; /* Setze eine minimale Höhe für die Hero-Section */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 2.5rem; /* Etwas größere Schrift für bessere Sichtbarkeit */
+    margin: 0;
+    line-height: 1.4;
+}
+
+.film-carousel, .film-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1.5rem 0;
+}
+
+.film-carousel img, .film-grid img {
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.film-carousel img:hover, .film-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.featured {
+    padding: 2rem 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featured h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.footer {
+    background: #000000;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Stile für den Film-Player-Bereich */
+.film-player {
+    background-color: #fff; /* Weißer Hintergrund für besseren Kontrast */
+    border-radius: 12px; /* Runde Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sanfte Schatten für Tiefe */
+    padding: 2.5rem; /* Innenabstand */
+    margin: 2rem auto; /* Automatisches Zentrieren mit Abstand oben und unten */
+    max-width: 900px; /* Maximale Breite des Players */
+    text-align: center; /* Zentriert den Inhalt */
+}
+
+.film-player h2 {
+    margin-bottom: 1.5rem; /* Abstand zum Video */
+    font-size: 1.8rem; /* Etwas größerer Titel */
+    color: #333; /* Dunkle Farbe für bessere Lesbarkeit */
+}
+
+.film-player video {
+    width: 100%; /* Video passt sich der Container-Breite an */
+    max-height: 500px; /* Maximale Höhe für das Video */
+    border-radius: 12px; /* Runde Ecken für das Video */
+    object-fit: cover; /* Verhindert Verzerrungen */
+}
